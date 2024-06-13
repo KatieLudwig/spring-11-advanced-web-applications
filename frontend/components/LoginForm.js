@@ -27,7 +27,7 @@ export default function LoginForm({ login }) {
     // the button to become enabled
     const trimmedUsername = values.username.trim()
     const trimmedPassword = values.password.trim()
-    return trimmedUsername.length < 3 && trimmedPassword.length >= 8
+    return !(trimmedUsername.length >= 3 && trimmedPassword.length >= 8)
   }
 
   return (
